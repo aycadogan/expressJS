@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+</head>
+<body>
+    <header>
+        Ho ho ho
+    </header>
+    <div class="left_content_list">
+        <h1>Wish List</h1>
+        <% for(let i=0; i<wishList.length;i++) { %>
+            <div class="card-item">
+                <div class="card_content">
+                    <p class="card_content_description">
+                        <%= wishList[i].content %>
+                    </p>
+                    <div class="card_bottom">
+                        <span class="card_content_title">
+                            <%= wishList[i].name %>
+                        </span>
+                        -
+                        <span class="card_content_date">
+                            <%= wishList[i].published %>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        <% } %>
+    </div>
+</body>
+</html>
